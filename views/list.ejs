@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Today</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="box" id="heading">
+        <h1><%= today%></h1>
+    </div>
+    
+    <div class="box">
+
+        <h2 class="item">To do: </h2>
+        
+        <div class="box">
+            <% for (var i = 0; i < todo.length; i++) {%>
+                <div class="item">
+                    <input type="checkbox">
+                    <p><%= todo[i]%></p>
+                </div>
+            <% } %>
+        </div>
+
+        <form class="item" action="/" method="post">
+            <input name="newItem" type="text" placeholder="new item" autocomplete="off">
+            <button type="submit" name="button">+</button>
+        </form>    
+
+    </div>
+
+</body>
+</html>
